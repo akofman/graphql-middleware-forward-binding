@@ -1,10 +1,9 @@
-import { IMiddleware } from 'graphql-middleware'
 import { forwardTo } from 'graphql-binding'
 import { set } from 'dot-prop'
 
 export const forward = (...types: string[]) => (
   database: string,
-): IMiddleware => {
+): any => {
   if (!database) {
     throw new Error(`Missing database name.`)
   }
